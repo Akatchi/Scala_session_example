@@ -1,0 +1,20 @@
+@(sessionForm: Form[String], session: String = "No session data found!")(implicit messages: Messages)
+
+@import helper._
+
+@main("Welcome to Play") {
+
+    <h1>Session values: </h1>
+    @session
+
+    <hr>
+
+    @helper.form(action = routes.Application.addToSession()) {
+        @inputText(
+            field = sessionForm("value"),
+            args = '_label -> "Value to add to session", 'placeholder -> "Some value"
+        )
+        <button>Add</button>
+    }
+
+}
