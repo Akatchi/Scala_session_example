@@ -1,4 +1,4 @@
-@(sessionForm: Form[String], session: String = "No session data found!")(implicit messages: Messages)
+@(sessionForm: Form[(String, String)], session: String = "No session data found!")(implicit messages: Messages)
 
 @import helper._
 
@@ -13,6 +13,10 @@
         @inputText(
             field = sessionForm("value"),
             args = '_label -> "Value to add to session", 'placeholder -> "Some value"
+        )
+        @inputText(
+            field = sessionForm("session"),
+            args = 'type -> "hidden"
         )
         <button>Add</button>
     }
