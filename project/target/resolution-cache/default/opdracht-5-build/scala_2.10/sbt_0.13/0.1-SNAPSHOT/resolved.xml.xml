@@ -4,7 +4,7 @@
 		module="opdracht-5-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20150911095512"
+		publication="20150915143359"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>
